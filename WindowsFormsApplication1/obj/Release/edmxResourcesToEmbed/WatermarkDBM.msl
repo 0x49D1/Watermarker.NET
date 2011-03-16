@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="WatermarkerModelStoreContainer" CdmEntityContainer="WatermarkerEntities">
+    <EntitySetMapping Name="Watermarks">
+      <EntityTypeMapping TypeName="WatermarkerModel.Watermark">
+        <MappingFragment StoreEntitySet="Watermark">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="OriginalDir" ColumnName="OriginalDir" />
+          <ScalarProperty Name="WatermarkDir" ColumnName="WatermarkDir" />
+          <ScalarProperty Name="OriginalHash" ColumnName="OriginalHash" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

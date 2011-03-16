@@ -1,0 +1,10 @@
+D:\My Documents\My Dropbox\Projects\Watermarker\WindowsFormsApplication1\bin\Debug\Watermarker.exe
+D:\My Documents\My Dropbox\Projects\Watermarker\WindowsFormsApplication1\bin\Debug\Watermarker.pdb
+D:\My Documents\My Dropbox\Projects\Watermarker\WindowsFormsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\My Documents\My Dropbox\Projects\Watermarker\WindowsFormsApplication1\obj\Debug\Watermarker.MainForm.resources
+D:\My Documents\My Dropbox\Projects\Watermarker\WindowsFormsApplication1\obj\Debug\Watermarker.Properties.Resources.resources
+D:\My Documents\My Dropbox\Projects\Watermarker\WindowsFormsApplication1\obj\Debug\ResGen.read.1.tlog
+D:\My Documents\My Dropbox\Projects\Watermarker\WindowsFormsApplication1\obj\Debug\ResGen.write.1.tlog
+D:\My Documents\My Dropbox\Projects\Watermarker\WindowsFormsApplication1\obj\Debug\Watermarker.exe
+D:\My Documents\My Dropbox\Projects\Watermarker\WindowsFormsApplication1\obj\Debug\Watermarker.pdb
+D:\My Documents\My Dropbox\Projects\Watermarker\WindowsFormsApplication1\bin\Debug\Watermarker.exe.config

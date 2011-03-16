@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="297b5db5-e85f-4850-aeac-bc7b08695438" name="dpursanov@DS-DEV-020 2010-06-10 12:18:33" runUser="DELTA-COMM\dpursanov" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="48f833ed-2c3c-4112-ab1e-767a14cd99ea">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="dpursanov_DS-DEV-020 2010-06-10 12_18_33" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-06-10T12:18:33.9608286+04:00" queuing="2010-06-10T12:18:34.4848286+04:00" start="2010-06-10T12:18:34.8918286+04:00" finish="2010-06-10T12:18:35.3438286+04:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetFilesMD5HashTest" storage="d:\my documents\my dropbox\projects\watermarker\watermarkertest\bin\release\watermarkertest.dll" id="6f136444-f584-19c9-5bf4-baceafca8fad">
+      <Execution timeOut="1800000" id="52f0ea5c-eb0e-4bd9-8b8c-fe01641a67ad" />
+      <TestMethod codeBase="D:/My Documents/My Dropbox/Projects/Watermarker/WatermarkerTest/bin/Release/WatermarkerTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WatermarkerTest.UtilitiesTest, WatermarkerTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetFilesMD5HashTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="6f136444-f584-19c9-5bf4-baceafca8fad" executionId="52f0ea5c-eb0e-4bd9-8b8c-fe01641a67ad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="52f0ea5c-eb0e-4bd9-8b8c-fe01641a67ad" testId="6f136444-f584-19c9-5bf4-baceafca8fad" testName="GetFilesMD5HashTest" computerName="DS-DEV-020" duration="00:00:00.0530600" startTime="2010-06-10T12:18:35.1238286+04:00" endTime="2010-06-10T12:18:35.2438286+04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="52f0ea5c-eb0e-4bd9-8b8c-fe01641a67ad">
+    </UnitTestResult>
+  </Results>
+</TestRun>
