@@ -25,11 +25,10 @@ namespace Watermarker
 
         private void Init()
         {
-
-
-            this.Text = string.Format("{3} ver. {0}.{1}.{2}", Assembly.GetExecutingAssembly().GetName().Version.ToString().Split('.')[0],
-                Assembly.GetExecutingAssembly().GetName().Version.ToString().Split('.')[1],
-                Assembly.GetExecutingAssembly().GetName().Version.ToString().Split('.')[2],
+            string tempAssemblyName = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            this.Text = string.Format("{3} ver. {0}.{1}.{2}", tempAssemblyName.Split('.')[0],
+                tempAssemblyName.Split('.')[1],
+                tempAssemblyName.Split('.')[2],
                 Application.ProductName.Trim());
 
             // image format
@@ -48,12 +47,7 @@ namespace Watermarker
             cmbFontFamily.DataSource = fontFamily;
             cmbFontFamily.SelectedItem = Properties.Settings.Default.FontFamily;
 
-            // font styles
-            fontStyle.Add(FontStyle.Regular);
-            fontStyle.Add(FontStyle.Bold);
-            fontStyle.Add(FontStyle.Italic);
-            fontStyle.Add(FontStyle.Strikeout);
-            fontStyle.Add(FontStyle.Underline);
+            AddFontStyles();
 
             lbStyle.DataSource = fontStyle;
 
@@ -71,6 +65,16 @@ namespace Watermarker
 
             // check
             Check();
+        }
+
+        private void AddFontStyles()
+        {
+            // font styles
+            fontStyle.Add(FontStyle.Regular);
+            fontStyle.Add(FontStyle.Bold);
+            fontStyle.Add(FontStyle.Italic);
+            fontStyle.Add(FontStyle.Strikeout);
+            fontStyle.Add(FontStyle.Underline);
         }
 
         private void AddImageFormats()
@@ -295,5 +299,3 @@ namespace Watermarker
         }
     }
 }
-
-

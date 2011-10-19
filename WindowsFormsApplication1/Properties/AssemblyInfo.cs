@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Watermarker.NET")]
-[assembly: AssemblyCopyright("Copyright © Pursanov Dmitry 2010")]
+[assembly: AssemblyCopyright("Copyright © Pursanov Dmitry 2010-2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
