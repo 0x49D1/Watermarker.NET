@@ -130,14 +130,14 @@ namespace Watermarker
                     openFileDialog1.ShowDialog();
                     if (openFileDialog1.FileNames.Length == 0 || (openFileDialog1.FileNames[0] == string.Empty))
                         return;
-                    btnSave.Text = string.Format("Save Changes to {0} images.", openFileDialog1.FileNames.Length);
                 }
 
                 folderBrowserDialog1.ShowDialog();
                 if (string.IsNullOrEmpty(folderBrowserDialog1.SelectedPath))
                     return;
                 lblLocation.Text = string.Format("Changes will be saved to {0}", folderBrowserDialog1.SelectedPath);
-            
+                btnSave.Text = string.Format("Save Changes to {0} image{1}.", openFileDialog1.FileNames.Length, ((openFileDialog1.FileNames.Length > 1) ? "s" : string.Empty));
+                btnSave.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -304,6 +304,6 @@ namespace Watermarker
             btnPreview_Click(null, null);
         }
 
-      
+
     }
 }

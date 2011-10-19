@@ -43,8 +43,6 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86" />
-    <Reference Include="System.Data.SQLite.Linq, Version=2.0.38.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -62,7 +60,7 @@
     <Compile Include="UtilitiesTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WindowsFormsApplication1\Watermarker.NET.csproj">
+    <ProjectReference Include="..\Watermarker\Watermarker.NET.csproj">
       <Project>{CA7AD3D5-1864-4B75-BD2C-20F63ACB4AE2}</Project>
       <Name>Watermarker.NET</Name>
     </ProjectReference>
