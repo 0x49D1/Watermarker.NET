@@ -120,7 +120,7 @@ namespace Watermarker
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnLocation_Click(object sender, EventArgs e)
         {
             try
             {
@@ -130,37 +130,14 @@ namespace Watermarker
                     openFileDialog1.ShowDialog();
                     if (openFileDialog1.FileNames.Length == 0 || (openFileDialog1.FileNames[0] == string.Empty))
                         return;
-                }
-                List<Bitmap> bmList = new List<Bitmap>();
-                foreach (var fileName in openFileDialog1.FileNames)
-                {
-                    Bitmap bm = new Bitmap(fileName);
-                    Graphics g = Graphics.FromImage(bm);
-                    System.Drawing.Font f = new Font((string)cmbFontFamily.SelectedValue, Int32.Parse(txtFontSize.Text), (FontStyle)lbStyle.SelectedItem);
-                    SolidBrush b = new SolidBrush(btnColor.BackColor);
-                    g.DrawString(textBox1.Text.Trim(), f, b, coordinateX, coordinateY);
-
-                    // todo Optimize this
-                    var files = fileName.Split('\\');
-                    var tfiles = files[files.Length - 1].Split('.');
-                    string fi = string.Empty;
-                    for (int i = 0; i < tfiles.Length - 1; i++)
-                    {
-                        fi += tfiles[i];
-                    }
-                    bm.Tag = fi;
-                    bmList.Add(bm);
+                    btnSave.Text = string.Format("Save Changes to {0} images.", openFileDialog1.FileNames.Length);
                 }
 
                 folderBrowserDialog1.ShowDialog();
                 if (string.IsNullOrEmpty(folderBrowserDialog1.SelectedPath))
                     return;
-                foreach (Bitmap bitmap in bmList)
-                {
-                    bitmap.Save(string.Format("{0}\\{1}.{2}", folderBrowserDialog1.SelectedPath, bitmap.Tag.ToString(), cmbFormat.SelectedValue.ToString().ToLower()), (ImageFormat)cmbFormat.SelectedValue);
-                }
-                tlblInfo.Text = string.Format("Success! Saved to: {0}", folderBrowserDialog1.SelectedPath);
-
+                lblLocation.Text = string.Format("Changes will be saved to {0}", folderBrowserDialog1.SelectedPath);
+            
             }
             catch (Exception ex)
             {
@@ -168,6 +145,36 @@ namespace Watermarker
                 tlblInfo.Text = string.Empty;
             }
 
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            List<Bitmap> bmList = new List<Bitmap>();
+            foreach (var fileName in openFileDialog1.FileNames)
+            {
+                Bitmap bm = new Bitmap(fileName);
+                Graphics g = Graphics.FromImage(bm);
+                System.Drawing.Font f = new Font((string)cmbFontFamily.SelectedValue, Int32.Parse(txtFontSize.Text), (FontStyle)lbStyle.SelectedItem);
+                SolidBrush b = new SolidBrush(btnColor.BackColor);
+                g.DrawString(textBox1.Text.Trim(), f, b, coordinateX, coordinateY);
+
+                // todo Optimize this
+                var files = fileName.Split('\\');
+                var tfiles = files[files.Length - 1].Split('.');
+                string fi = string.Empty;
+                for (int i = 0; i < tfiles.Length - 1; i++)
+                {
+                    fi += tfiles[i];
+                }
+                bm.Tag = fi;
+                bmList.Add(bm);
+            }
+
+            foreach (Bitmap bitmap in bmList)
+            {
+                bitmap.Save(string.Format("{0}\\{1}.{2}", folderBrowserDialog1.SelectedPath, bitmap.Tag.ToString(), cmbFormat.SelectedValue.ToString().ToLower()), (ImageFormat)cmbFormat.SelectedValue);
+            }
+            tlblInfo.Text = string.Format("Success! Saved to: {0}", folderBrowserDialog1.SelectedPath);
         }
 
         private void btnPreview_Click(object sender, EventArgs e)
@@ -186,7 +193,6 @@ namespace Watermarker
             System.Drawing.Font f = new Font((string)cmbFontFamily.SelectedValue, Int32.Parse(txtFontSize.Text), (FontStyle)lbStyle.SelectedItem);
             SolidBrush b = new SolidBrush(btnColor.BackColor);
             g.DrawString(textBox1.Text.Trim(), f, b, coordinateX, coordinateY);
-
             lblImageSize.Visible = lblSize.Visible = true;
             lblSize.Text = bm.Size.Width + "x" + bm.Size.Height;
             tbHeight.Enabled = tbWidth.Enabled = true;
@@ -297,5 +303,7 @@ namespace Watermarker
             coordinateY = tbHeight.Maximum - tbHeight.Value;
             btnPreview_Click(null, null);
         }
+
+      
     }
 }

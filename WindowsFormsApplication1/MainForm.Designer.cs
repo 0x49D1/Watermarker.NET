@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnLocations = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -55,31 +55,34 @@
             this.btnSaveTemplate = new System.Windows.Forms.Button();
             this.chbSaveOnClose = new System.Windows.Forms.CheckBox();
             this.lnkSupport = new System.Windows.Forms.LinkLabel();
-            this.picPreview = new System.Windows.Forms.PictureBox();
             this.btnPreview = new System.Windows.Forms.Button();
-            this.lblImageSize = new System.Windows.Forms.Label();
-            this.lblSize = new System.Windows.Forms.Label();
             this.tbWidth = new System.Windows.Forms.TrackBar();
             this.tbHeight = new System.Windows.Forms.TrackBar();
             this.lblCoordinates = new System.Windows.Forms.Label();
+            this.picPreview = new System.Windows.Forms.PictureBox();
+            this.lblImageSize = new System.Windows.Forms.Label();
+            this.lblSize = new System.Windows.Forms.Label();
             this.cmbFontFamily = new Watermarker.ComboBox(this.components);
             this.cmbFormat = new Watermarker.ComboBox(this.components);
+            this.btnSave = new System.Windows.Forms.Button();
+            this.lblLocation = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPreview)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSave
+            // btnLocations
             // 
-            this.btnSave.Location = new System.Drawing.Point(83, 205);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(233, 57);
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "Add pictures to watermark  && choose save location";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnLocations.Location = new System.Drawing.Point(83, 205);
+            this.btnLocations.Name = "btnLocations";
+            this.btnLocations.Size = new System.Drawing.Size(212, 40);
+            this.btnLocations.TabIndex = 0;
+            this.btnLocations.Text = "Add pictures to watermark  && choose save location";
+            this.toolTip1.SetToolTip(this.btnLocations, "Add pictures to watermark  && choose save location");
+            this.btnLocations.UseVisualStyleBackColor = true;
+            this.btnLocations.Click += new System.EventHandler(this.btnLocation_Click);
             // 
             // openFileDialog1
             // 
@@ -283,15 +286,6 @@
             this.toolTip1.SetToolTip(this.lnkSupport, "Go to project website to suggest a feature or report a bug");
             this.lnkSupport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSupport_LinkClicked);
             // 
-            // picPreview
-            // 
-            this.picPreview.Location = new System.Drawing.Point(385, 12);
-            this.picPreview.Name = "picPreview";
-            this.picPreview.Size = new System.Drawing.Size(246, 251);
-            this.picPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPreview.TabIndex = 22;
-            this.picPreview.TabStop = false;
-            // 
             // btnPreview
             // 
             this.btnPreview.Location = new System.Drawing.Point(322, 90);
@@ -303,26 +297,6 @@
         "it. To apply new changes to watermark-click on this button again");
             this.btnPreview.UseVisualStyleBackColor = true;
             this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
-            // 
-            // lblImageSize
-            // 
-            this.lblImageSize.AutoSize = true;
-            this.lblImageSize.Location = new System.Drawing.Point(454, 299);
-            this.lblImageSize.Name = "lblImageSize";
-            this.lblImageSize.Size = new System.Drawing.Size(83, 13);
-            this.lblImageSize.TabIndex = 25;
-            this.lblImageSize.Text = "Image real size:";
-            this.lblImageSize.Visible = false;
-            // 
-            // lblSize
-            // 
-            this.lblSize.AutoSize = true;
-            this.lblSize.Location = new System.Drawing.Point(560, 299);
-            this.lblSize.Name = "lblSize";
-            this.lblSize.Size = new System.Drawing.Size(13, 13);
-            this.lblSize.TabIndex = 26;
-            this.lblSize.Text = "x";
-            this.lblSize.Visible = false;
             // 
             // tbWidth
             // 
@@ -355,6 +329,35 @@
             this.lblCoordinates.Text = "Watermark coordinates";
             this.toolTip1.SetToolTip(this.lblCoordinates, "Adjust sliders to change coordinates");
             // 
+            // picPreview
+            // 
+            this.picPreview.Location = new System.Drawing.Point(385, 12);
+            this.picPreview.Name = "picPreview";
+            this.picPreview.Size = new System.Drawing.Size(246, 251);
+            this.picPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPreview.TabIndex = 22;
+            this.picPreview.TabStop = false;
+            // 
+            // lblImageSize
+            // 
+            this.lblImageSize.AutoSize = true;
+            this.lblImageSize.Location = new System.Drawing.Point(454, 299);
+            this.lblImageSize.Name = "lblImageSize";
+            this.lblImageSize.Size = new System.Drawing.Size(83, 13);
+            this.lblImageSize.TabIndex = 25;
+            this.lblImageSize.Text = "Image real size:";
+            this.lblImageSize.Visible = false;
+            // 
+            // lblSize
+            // 
+            this.lblSize.AutoSize = true;
+            this.lblSize.Location = new System.Drawing.Point(560, 299);
+            this.lblSize.Name = "lblSize";
+            this.lblSize.Size = new System.Drawing.Size(13, 13);
+            this.lblSize.TabIndex = 26;
+            this.lblSize.Text = "x";
+            this.lblSize.Visible = false;
+            // 
             // cmbFontFamily
             // 
             this.cmbFontFamily.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -379,11 +382,32 @@
             this.cmbFormat.TabIndex = 2;
             this.cmbFormat.SelectedIndexChanged += new System.EventHandler(this.cmbFormat_SelectedIndexChanged);
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(83, 251);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(212, 40);
+            this.btnSave.TabIndex = 30;
+            this.btnSave.Text = "Save Changes";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // lblLocation
+            // 
+            this.lblLocation.AutoSize = true;
+            this.lblLocation.Location = new System.Drawing.Point(12, 299);
+            this.lblLocation.MaximumSize = new System.Drawing.Size(400, 0);
+            this.lblLocation.Name = "lblLocation";
+            this.lblLocation.Size = new System.Drawing.Size(0, 13);
+            this.lblLocation.TabIndex = 31;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 343);
+            this.Controls.Add(this.lblLocation);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblImageSize);
             this.Controls.Add(this.lblSize);
             this.Controls.Add(this.lblCoordinates);
@@ -410,7 +434,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbFormat);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnLocations);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -421,9 +445,9 @@
             this.panel1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbWidth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,7 +455,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnLocations;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
@@ -465,6 +489,8 @@
         private System.Windows.Forms.TrackBar tbWidth;
         private System.Windows.Forms.TrackBar tbHeight;
         private System.Windows.Forms.Label lblCoordinates;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label lblLocation;
     }
 }
 
