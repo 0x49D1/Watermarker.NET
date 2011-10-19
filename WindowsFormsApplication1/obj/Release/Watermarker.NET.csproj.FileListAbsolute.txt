@@ -20,3 +20,14 @@ C:\Users\dpursanov.DELTA-COMM\Documents\Dropbox\Projects\Watermarker\WindowsForm
 C:\Users\dpursanov.DELTA-COMM\Documents\Dropbox\Projects\Watermarker\WindowsFormsApplication1\obj\Release\Watermarker.Properties.Resources.resources
 C:\Users\dpursanov.DELTA-COMM\Documents\Dropbox\Projects\Watermarker\WindowsFormsApplication1\obj\Release\ResGen.read.1.tlog
 C:\Users\dpursanov.DELTA-COMM\Documents\Dropbox\Projects\Watermarker\WindowsFormsApplication1\obj\Release\ResGen.write.1.tlog
+D:\Work\Debug Versions\Watermarker\WindowsFormsApplication1\bin\Release\WatermarkerDotNET.exe.config
+D:\Work\Debug Versions\Watermarker\WindowsFormsApplication1\obj\Release\WatermarkerDotNET.exe
+D:\Work\Debug Versions\Watermarker\WindowsFormsApplication1\obj\Release\WatermarkerDotNET.pdb
+D:\Work\Debug Versions\Watermarker\WindowsFormsApplication1\bin\Release\Watermarker.sqlite
+D:\Work\Debug Versions\Watermarker\WindowsFormsApplication1\bin\Release\WatermarkerDotNET.exe
+D:\Work\Debug Versions\Watermarker\WindowsFormsApplication1\bin\Release\WatermarkerDotNET.pdb
+D:\Work\Debug Versions\Watermarker\WindowsFormsApplication1\obj\Release\ResolveAssemblyReference.cache
+D:\Work\Debug Versions\Watermarker\WindowsFormsApplication1\obj\Release\Watermarker.MainForm.resources
+D:\Work\Debug Versions\Watermarker\WindowsFormsApplication1\obj\Release\Watermarker.Properties.Resources.resources
+D:\Work\Debug Versions\Watermarker\WindowsFormsApplication1\obj\Release\ResGen.read.1.tlog
+D:\Work\Debug Versions\Watermarker\WindowsFormsApplication1\obj\Release\ResGen.write.1.tlog

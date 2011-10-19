@@ -17,3 +17,12 @@ C:\Users\dpursanov.DELTA-COMM\Documents\Dropbox\Projects\Watermarker\Watermarker
 C:\Users\dpursanov.DELTA-COMM\Documents\Dropbox\Projects\Watermarker\WatermarkerTest\obj\Release\ResolveAssemblyReference.cache
 C:\Users\dpursanov.DELTA-COMM\Documents\Dropbox\Projects\Watermarker\WatermarkerTest\obj\Release\WatermarkerTest.dll
 C:\Users\dpursanov.DELTA-COMM\Documents\Dropbox\Projects\Watermarker\WatermarkerTest\obj\Release\WatermarkerTest.pdb
+D:\Work\Debug Versions\Watermarker\WatermarkerTest\bin\Release\Watermarker.sqlite
+D:\Work\Debug Versions\Watermarker\WatermarkerTest\bin\Release\WatermarkerTest.dll
+D:\Work\Debug Versions\Watermarker\WatermarkerTest\bin\Release\WatermarkerTest.pdb
+D:\Work\Debug Versions\Watermarker\WatermarkerTest\bin\Release\WatermarkerDotNET.exe
+D:\Work\Debug Versions\Watermarker\WatermarkerTest\bin\Release\WatermarkerDotNET.pdb
+D:\Work\Debug Versions\Watermarker\WatermarkerTest\bin\Release\nunit.framework.xml
+D:\Work\Debug Versions\Watermarker\WatermarkerTest\obj\Release\ResolveAssemblyReference.cache
+D:\Work\Debug Versions\Watermarker\WatermarkerTest\obj\Release\WatermarkerTest.dll
+D:\Work\Debug Versions\Watermarker\WatermarkerTest\obj\Release\WatermarkerTest.pdb
